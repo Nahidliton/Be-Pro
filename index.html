@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scientific Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="calculator">
+            <!-- Calculator Header -->
+            <div class="calc-header">
+                <div class="calc-title">
+                    <i class="fas fa-calculator"></i>
+                    <h1>Be-Pro</h1>
+                </div>
+                <div class="header-controls">
+                    <div class="mode-switch">
+                        <button class="mode-btn active" data-mode="basic">Basic</button>
+                        <button class="mode-btn" data-mode="scientific">Scientific</button>
+                    </div>
+                    <button class="history-toggle" id="historyToggle">
+                        <i class="fas fa-history"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Display Area -->
+            <div class="display">
+                <div class="expression" id="expression"></div>
+                <div class="result" id="result">0</div>
+            </div>
+
+            <!-- Basic Calculator Buttons -->
+            <div class="buttons basic-buttons">
+                <div class="row">
+                    <button class="btn operator" data-action="clear">C</button>
+                    <button class="btn operator" data-action="backspace">⌫</button>
+                    <button class="btn operator" data-action="percent">%</button>
+                    <button class="btn operator" data-action="divide">÷</button>
+                </div>
+                <div class="row">
+                    <button class="btn number" data-number="7">7</button>
+                    <button class="btn number" data-number="8">8</button>
+                    <button class="btn number" data-number="9">9</button>
+                    <button class="btn operator" data-action="multiply">×</button>
+                </div>
+                <div class="row">
+                    <button class="btn number" data-number="4">4</button>
+                    <button class="btn number" data-number="5">5</button>
+                    <button class="btn number" data-number="6">6</button>
+                    <button class="btn operator" data-action="subtract">-</button>
+                </div>
+                <div class="row">
+                    <button class="btn number" data-number="1">1</button>
+                    <button class="btn number" data-number="2">2</button>
+                    <button class="btn number" data-number="3">3</button>
+                    <button class="btn operator" data-action="add">+</button>
+                </div>
+                <div class="row">
+                    <button class="btn number zero" data-number="0">0</button>
+                    <button class="btn decimal" data-action="decimal">.</button>
+                    <button class="btn equals" data-action="equals">=</button>
+                </div>
+            </div>
+
+            <!-- Scientific Buttons (Hidden by default) -->
+            <div class="buttons scientific-buttons">
+                <div class="sci-row">
+                    <button class="btn sci" data-action="sin">sin</button>
+                    <button class="btn sci" data-action="cos">cos</button>
+                    <button class="btn sci" data-action="tan">tan</button>
+                    <button class="btn sci" data-action="sqrt">√</button>
+                    <button class="btn sci" data-action="power">xʸ</button>
+                </div>
+                <div class="sci-row">
+                    <button class="btn sci" data-action="log">log</button>
+                    <button class="btn sci" data-action="ln">ln</button>
+                    <button class="btn sci" data-action="pi">π</button>
+                    <button class="btn sci" data-action="e">e</button>
+                    <button class="btn sci" data-action="factorial">x!</button>
+                </div>
+                <div class="sci-row">
+                    <button class="btn sci" data-action="abs">|x|</button>
+                    <button class="btn sci" data-action="exp">eˣ</button>
+                    <button class="btn sci" data-action="inv">1/x</button>
+                    <button class="btn sci" data-action="square">x²</button>
+                    <button class="btn sci" data-action="cube">x³</button>
+                </div>
+            </div>
+
+            <!-- Memory Section -->
+            <div class="memory-section">
+                <div class="memory-label">Memory</div>
+                <div class="memory-controls">
+                    <button class="memory-btn" data-memory="clear">MC</button>
+                    <button class="memory-btn" data-memory="recall">MR</button>
+                    <button class="memory-btn" data-memory="store">MS</button>
+                    <button class="memory-btn" data-memory="add">M+</button>
+                    <button class="memory-btn" data-memory="subtract">M-</button>
+                </div>
+            </div>
+
+            <!-- History Panel (Hidden by default) -->
+            <div class="history-panel" id="historyPanel">
+                <div class="history-header">
+                    <h3>History</h3>
+                    <button class="close-history" id="closeHistory">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <div class="history-list" id="historyList">
+                    <!-- History items will be added here -->
+                </div>
+                <button class="clear-history-btn" id="clearHistory">Clear History</button>
+            </div>
+        </div>
+    </div>
+<!--nothing-->
+    <script src="script.js"></script>
+</body>
+</html>
